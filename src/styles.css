@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    font-family: 'TRT', sans-serif;
+}
+body{
+    background-image: url(./assets/one-doctor-holding-clipboard-reads-medical-record-generated-by-ai.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-x: center;
+}
