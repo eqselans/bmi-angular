@@ -1,5 +1,11 @@
-<div class="container mt-5">
-    <div class="card bg-primary bg-opacity-10">
+<div class="container d-flex justify-content-center mt-5">
+    
+    <div class="card bg-primary bg-opacity-10 w-75">
+        <div class="card-container" *ngIf="nonItems">
+            <div class="alert alert-danger">
+                <h3 class="fw-bolder">Enter your weight and height</h3>
+            </div>
+        </div>
         <div class="card-header text-white">
             <h1 class="fw-bolder">Body Mass Index</h1>
         </div>
@@ -18,47 +24,53 @@
 
             <div class="card-container" *ngIf="bmi>=40">
                 <div class="alert alert-danger">
-                    <h3 class="fw-bolder">Your BMI is {{bmi.toFixed(2)}} above what it should be !
+                    <h3 class="fw-bolder">Your BMI is {{bmi.toFixed(2)}} kg/m<sup>2</sup> above what it should be ! <br>
                         Status: III.Degree morbidly obese
                     </h3>
                 </div>
             </div>
             <div class="card-container" *ngIf="bmi>=35 && bmi<40">
                 <div class="alert alert-danger">
-                    <h3 class="fw-bolder">Your BMI is {{bmi.toFixed(2)}} above what it should be !
+                    <h3 class="fw-bolder">Your BMI is {{bmi.toFixed(2)}} kg/m<sup>2</sup> above what it should be ! <br>
                         Status: II.Degree obese
                     </h3>
                 </div>
             </div>
             <div class="card-container" *ngIf="bmi>=30 && bmi<35">
                 <div class="alert alert-danger">
-                    <h3 class="fw-bolder">Your BMI is {{bmi.toFixed(2)}} above what it should be !
+                    <h3 class="fw-bolder">Your BMI is {{bmi.toFixed(2)}} kg/m<sup>2</sup> above what it should be ! <br>
                         Status: I.Degree obese
                     </h3>
                 </div>
             </div>
             <div class="card-container" *ngIf="bmi>=25 && bmi<30">
                 <div class="alert alert-danger">
-                    <h3 class="fw-bolder">Your BMI is {{bmi.toFixed(2)}} above what it should be !
+                    <h3 class="fw-bolder">Your BMI is {{bmi.toFixed(2)}} kg/m<sup>2</sup> above what it should be ! <br>
                         Status: Overweight
                     </h3>
                 </div>
             </div>
             <div class="card-container" *ngIf="bmi>=18.5 && bmi<25">
                 <div class="alert alert-danger">
-                    <h3 class="fw-bolder">Your BMI is {{bmi.toFixed(2)}} 
+                    <h3 class="fw-bolder">Your BMI is {{bmi.toFixed(2)}} kg/m<sup>2</sup> <br>
                         Status: Normal weight
                     </h3>
                 </div>
             </div>
             <div class="card-container" *ngIf="bmi<18.5">
                 <div class="alert alert-danger">
-                    <h3 class="fw-bolder">Your BMI is {{bmi.toFixed(2)}} below what it should be !
+                    <h3 class="fw-bolder">Your BMI is {{bmi.toFixed(2)}} kg/m<sup>2</sup> below what it should be ! <br>
                         Status: Underweight
                     </h3>
                 </div>
             </div>
 
+            <div class="card-footer">
+                <div class="text-white-50">
+                    *Calculations were made as stated by the Ministry of Health of the Republic of Turkey.
+                </div>
+            </div>
+            
         </div>
     </div>
 </div>
